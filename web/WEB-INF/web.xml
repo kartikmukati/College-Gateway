@@ -52,6 +52,10 @@
         <servlet-name>ImportentMessage</servlet-name>
         <servlet-class>ImportentMessage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminRegistration</servlet-name>
+        <servlet-class>AdminRegistration</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserLogin</servlet-name>
         <url-pattern>/UserLogin</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>ImportentMessage</servlet-name>
         <url-pattern>/ImportentMessage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminRegistration</servlet-name>
+        <url-pattern>/AdminRegistration</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

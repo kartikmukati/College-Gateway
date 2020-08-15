@@ -57,6 +57,17 @@
 					</div>
 					
 				</form>
+                            <ul class="login-more p-t-30">
+						<li>
+							<span class="txt1">
+								Don?t have an account?
+							</span>
+
+							<a href="adminregistration.jsp" class="txt2">
+								Sign up
+							</a>
+						</li>
+					</ul>
 			</div>
 		</div>
 	</div>

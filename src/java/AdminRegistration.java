@@ -7,9 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class UserRegistration extends HttpServlet 
+public class AdminRegistration extends HttpServlet 
 {
     private Connection con;
     private PreparedStatement ps;
@@ -20,7 +19,7 @@ public class UserRegistration extends HttpServlet
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
 	    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Collegegateway","root","root");
-            String sql = "insert into users values(?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into admin values(?,?,?,?,?,?,?)";
             ps = con.prepareStatement(sql);
         }
         catch(Exception ex)
@@ -44,19 +43,11 @@ public class UserRegistration extends HttpServlet
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
-            PrintWriter out = response.getWriter();
+           PrintWriter out = response.getWriter();
          //read
-           String firstname = request.getParameter("firstname");
+           String college_code = request.getParameter("college_code");
            
-           String lastname = request.getParameter("lastname");
-           
-           String enrollmentno = request.getParameter("enrollmentno").toUpperCase();
-           
-           String gender = request.getParameter("gender");
-           
-           String semester = request.getParameter("semester");
-           
-           String branch = request.getParameter("branch");
+           String college_name = request.getParameter("college_name");
            
            String contactno = request.getParameter("contactno");
            
@@ -69,31 +60,20 @@ public class UserRegistration extends HttpServlet
            String password = request.getParameter("password");
            
            String checkbox = request.getParameter("checkbox");
-           
-           System.out.println(checkbox);
-           
-           String college_code = enrollmentno.substring(0,4);
-           
+          
            if (checkbox != null) {
            int i=0;
            try
            {
                
-               ps.setString(1, firstname);
-               ps.setString(2, lastname);
-               ps.setString(3, enrollmentno);
-               ps.setString(4, gender);
-               ps.setString(5, semester);
-               ps.setString(6, branch);
-               ps.setString(7, contactno);
-               ps.setString(8, address);
-               ps.setString(9, city);
-               ps.setString(10, email);
-               ps.setString(11, password);
-               ps.setString(12, college_code);
+               ps.setString(1, college_code);
+               ps.setString(2, college_name);
+               ps.setString(3, password);
+               ps.setString(4, contactno);
+               ps.setString(5, email);
+               ps.setString(6, address);
+               ps.setString(7, city);
                i = ps.executeUpdate();
-               
-               
            }
            catch(Exception ex)
            {
@@ -102,14 +82,14 @@ public class UserRegistration extends HttpServlet
        
             if(i > 0)
             {
-                response.sendRedirect("userlogin.jsp");
+                response.sendRedirect("adminlogin.jsp");
             }
             else
             {
-                response.sendRedirect("userregistration.jsp");
+                response.sendRedirect("adminregistration.jsp");
             }
         } else {
-               response.sendRedirect("userregistration.jsp");
+               response.sendRedirect("adminregistration.jsp");
         }
    }
     

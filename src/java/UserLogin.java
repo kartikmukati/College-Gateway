@@ -45,13 +45,13 @@ public class UserLogin extends HttpServlet
         //PrintWriter out = response.getWriter();
         //read
         
-        String username = request.getParameter("enrollmentno");
+        String username = request.getParameter("enrollmentno").toUpperCase();
         
         String password = request.getParameter("password");
         
        //process
        
-        String sql = "select first_name,last_name,gender from users where enrollment_no = ? and password = ?";
+        String sql = "select first_name,last_name,gender, College_code from users where enrollment_no = ? and password = ?";
         try
         {
            ps = con.prepareStatement(sql);
@@ -65,11 +65,13 @@ public class UserLogin extends HttpServlet
                String firstname = rs.getString(1);
                String lastname = rs.getString(2);
                String gender = rs.getString(3);
+               String collegeCode = rs.getString(4);
                
                HttpSession session = request.getSession();
                session.setAttribute("firstname", firstname);
                session.setAttribute("lastname", lastname);
                session.setAttribute("gender", gender);
+               session.setAttribute("collegecode", collegeCode);
                response.sendRedirect("userdashboard.jsp");
            }
            else

@@ -35,6 +35,7 @@
                             <form class="login100-form validate-form" action="UserLogin" method="post">
 					<span class="login100-form-title p-b-50">
 						College Gateway
+                                                User Login
 					</span>
 					<span class="login100-form-avatar">
 						<img src="images/pilogo.png" alt="AVATAR">
@@ -55,7 +56,9 @@
 							Login
 						</button>
 					</div>
-					<ul class="login-more p-t-30">
+					
+				</form>
+                            <ul class="login-more p-t-30">
 						<li>
 							<span class="txt1">
 								Don?t have an account?
@@ -66,7 +69,6 @@
 							</a>
 						</li>
 					</ul>
-				</form>
 			</div>
 		</div>
 	</div>

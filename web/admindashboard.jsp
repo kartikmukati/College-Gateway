@@ -21,13 +21,10 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		        <a class="nav-link" href="admindashboard.jsp">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">About</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Contact</a>
+		        <a class="nav-link" href="admin-about-us.jsp">About us</a>
 		      </li>
                        <li class="nav-item dropdown active">
         		<a class="nav-link dropdown-toggle float-lg-right" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@admin</a>
@@ -41,28 +38,9 @@
    			 </span>
 		  </div>
 	</div>
-</nav>
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-      <div class="alert alert-dark text-center" role="alert">
-   <a href="#" class="alert-link">Important Notice</a>. you want to share with students.
-</div>
-      <form action="ImportentMessage" method="post">
-     <div class="form-group">
-            <label for="">Subject</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="subject">
-            <small id="emailHelp" class="form-text text-muted">Not more than 30 words</small>
-          </div>
-          <div class="form-group">
-    <label for="exampleFormControlTextarea1">Message</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
-  </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-</div>    
+</nav> 
                          
-<div class="container">
+<div class="container mt-3">
 	<div class="row">
 		<div class="col-xl-3 col-sm-6 col-xs-12">
 			<div class="card">
