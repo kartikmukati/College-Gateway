@@ -24,7 +24,7 @@
 
         <section id="what-we-do">
             <div class="container-fluid">
-                <h2 class="section-title mb-2 h1">About us</h2>
+                <h2 class="section-title mb-2 h1">About College</h2>
                 <p class="text-center text-muted h5">Having and managing a correct marketing strategy is crucial in a fast moving market.</p>
                 <div class="row mt-5">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">

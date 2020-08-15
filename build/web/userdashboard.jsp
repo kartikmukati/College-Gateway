@@ -39,7 +39,7 @@
 		        <a class="nav-link" href="userdashboard.jsp">Home <span class="sr-only">(current)</span></a>
 		      </li>
                       <li class="nav-item active">
-		        <a class="nav-link" href="admin-about-us.jsp">About us <span class="sr-only">(current)</span></a>
+		        <a class="nav-link" href="admin-about-us.jsp">About College <span class="sr-only">(current)</span></a>
 		      </li>
                   
                       <li class="nav-item dropdown active">

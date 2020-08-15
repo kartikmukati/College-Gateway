@@ -33,12 +33,9 @@
 		        <a class="nav-link" href="admindashboard.jsp">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">About</a>
+		        <a class="nav-link" href="admin-about-us.jsp">About College</a>
 		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Contact</a>
-		      </li>
-                  
+		     
                      <li class="nav-item dropdown active">
         			<a class="nav-link dropdown-toggle float-lg-right" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <%

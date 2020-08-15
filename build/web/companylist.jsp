@@ -6,6 +6,7 @@
     String firstname = (String)session.getAttribute("firstname");
     String lastname = (String)session.getAttribute("lastname");
     String gender = (String)session.getAttribute("gender");
+    String collegeCode = (String) session.getAttribute("collegecode");
     if(firstname == null)
     {
         response.sendRedirect("index.jsp");
@@ -31,11 +32,9 @@
 		        <a class="nav-link" href="admindashboard.jsp">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">About</a>
+		        <a class="nav-link" href="admin-about-us.jsp">About College</a>
 		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Contact</a>
-		      </li>
+		 
                   
                       <li class="nav-item dropdown active">
         			<a class="nav-link dropdown-toggle float-lg-right" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,12 +84,13 @@
       
                     if(cat.equals("allcompany"))
                     {
-                        String sql = "select name,date,type from company order by date asc";
+                        String sql = "select name,date,type from company where College_Code = ? order by date asc";
                             try
                             {
                                Class.forName("com.mysql.jdbc.Driver");
                                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Collegegateway","root","root");
                                PreparedStatement ps = con.prepareStatement(sql);
+                               ps.setString(1, collegeCode);
                                ResultSet rs= ps.executeQuery();
                                int counter=1;
                                while(rs.next())
@@ -121,13 +121,14 @@
                     }
                     else
                     {
-                        String sql  = "select name,date,type from company where type = ?";
+                        String sql  = "select name,date,type from company where type = ? and College_Code = ?";
                         try
                         {
                             Class.forName("com.mysql.jdbc.Driver");
                             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Collegegateway","root","root");
                             PreparedStatement ps = con.prepareStatement(sql);
                             ps.setString(1, cat);
+                            ps.setString(2, collegeCode);
                             ResultSet rs = ps.executeQuery();
                             int counter=1;
                             while(rs.next())
@@ -139,8 +140,8 @@
                                 <tr>
                                     <th scope="row"><%=counter%></th>
                                     <td><a class="text-white"href="CompanyDetails?name=<%=name%>"><%=name%></a></td>
-                                    <td><a class="text-white"href="#"><%=date%></a></td>
-                                    <td><a class="text-white"href="#"><%=cat%></a></td>
+                                    <td><a class="text-white"href="CompanyDetails?name=<%=name%>"><%=date%></a></td>
+                                    <td><a class="text-white"href="CompanyDetails?name=<%=name%>"><%=cat%></a></td>
                                 </tr>    
                 <%
                                 counter++;

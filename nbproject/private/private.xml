@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/db/DBConnector.java</file>
             <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/userdashboard.jsp</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/db/DBConnector.java</file>
             <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/UserLogin.java</file>
             <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/UserRegistration.java</file>
-            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/admindashboard.jsp</file>
-            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/AdminLogin.java</file>
-            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/AdminRegistration.java</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/aboutus.jsp</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/addcompany.jsp</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/companydetails.jsp</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/LogoutUser.java</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/src/java/CompanyDetails.java</file>
+            <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/companylist.jsp</file>
             <file>file:/C:/Users/Kartik%20Mukati/Documents/NetBeansProjects/MVC%20Minor/CollegeGateway/web/admin-about-us.jsp</file>
         </group>
     </open-files>
